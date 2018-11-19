@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>sticky</title>
+</head>
+<script>
+  window.onscroll = function() {
+    let stickyContent = document.getElementById('js-sticky-content');
+    let scrollTop  = window.pageYOffset;
+
+    if (scrollTop > 100) {
+      stickyContent.style.display = 'block';
+    } else {
+      stickyContent.style.display = 'none';
+    }
+
+  }
+</script>
+<style>
+
+body {
+  height: 2000px;
+}
+
+.contaniner {
+  width: 960px;
+  height: 100px;
+  margin: 0 auto;
+  position: fixed;
+  background-color: #aaa;
+  display: none;
+}
+
+.sticky-text {
+  text-align: center;
+}
+
+.contents1 {
+  height: 50px;
+  background-color: #b57575;
+}
+
+.contents2 {
+  height: 100px;
+  background-color: #ae75b5;
+}
+
+.contents3 {
+  height: 150px;
+  background-color: #759bb5;
+}
+
+.contents4 {
+  height: 200px;
+  background-color: #75b58e;
+}
+
+.contents5 {
+  height: 250px;
+  background-color: #afb575;
+}
+</style>
+<body>
+<div id='js-sticky-content' class='contaniner'>
+  <p class='sticky-text'>ここに入力されているテキストが追従します</p>
+</div>
+<div class='contents1'>
+  <p>コンテンツ１</p>
+</div>
+<div class='contents2'>
+  <p>コンテンツ2</p>
+</div>
+<div class='contents3'>
+  <p>コンテンツ3</p>
+</div>
+<div class='contents4'>
+  <p>コンテンツ4</p>
+</div>
+<div class='contents5'>
+  <p>コンテンツ5</p>
+</div>
+</body>
+</html>
